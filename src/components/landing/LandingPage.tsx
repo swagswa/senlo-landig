@@ -20,6 +20,7 @@ import {
   Workflow,
   Menu,
   ArrowRight,
+  type LucideIcon,
 } from 'lucide-react';
 import type { TabItem } from '@/components/ui/expandable-tabs';
 import LandingChat from './LandingChat';
@@ -307,19 +308,23 @@ Navbar.displayName = 'Navbar';
 // Decorative Elements
 // ============================================================================
 
-const DecorativeStat = memo<{
-  icon: React.ReactNode;
+interface DecorativeStatProps {
+  Icon: LucideIcon;
+  iconColor: string;
   label: string;
   value: string;
   iconBg: string;
   delay: number;
-}>(({ icon, label, value, iconBg, delay }) => (
-  <motion.div
-    variants={decorEntranceVariants}
-    custom={delay}
-    initial="hidden"
-    animate="visible"
-    className="
+}
+
+const DecorativeStat = memo<DecorativeStatProps>(
+  ({ Icon, iconColor, label, value, iconBg, delay }) => (
+    <motion.div
+      variants={decorEntranceVariants}
+      custom={delay}
+      initial="hidden"
+      animate="visible"
+      className="
       pointer-events-none select-none
       flex items-center gap-3 xl:gap-4 2xl:gap-5
       px-4 py-3 xl:px-5 xl:py-4 2xl:px-6 2xl:py-5
@@ -328,16 +333,21 @@ const DecorativeStat = memo<{
       rounded-xl xl:rounded-2xl
       shadow-xl shadow-black/20
     "
-  >
-    <div className={`p-2 xl:p-3 2xl:p-4 rounded-lg xl:rounded-xl ${iconBg}`}>{icon}</div>
-    <div>
-      <p className="text-[10px] xl:text-xs 2xl:text-sm text-white/40 uppercase tracking-wider">
-        {label}
-      </p>
-      <p className="text-lg xl:text-xl 2xl:text-2xl font-semibold text-white">{value}</p>
-    </div>
-  </motion.div>
-));
+    >
+      <div
+        className={`w-10 h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 rounded-lg xl:rounded-xl flex items-center justify-center flex-shrink-0 ${iconBg}`}
+      >
+        <Icon size={22} strokeWidth={2} className={`xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 ${iconColor}`} />
+      </div>
+      <div>
+        <p className="text-[10px] xl:text-xs 2xl:text-sm text-white/40 uppercase tracking-wider">
+          {label}
+        </p>
+        <p className="text-lg xl:text-xl 2xl:text-2xl font-semibold text-white">{value}</p>
+      </div>
+    </motion.div>
+  ),
+);
 DecorativeStat.displayName = 'DecorativeStat';
 
 const DecorativeChatBubble = memo<{
@@ -388,7 +398,8 @@ const LeftDecorations = memo(() => {
     <>
       <div className="absolute top-[8%]" style={{ left: 'calc(-10vw - 60px)' }}>
         <DecorativeStat
-          icon={<TrendingUp size={14} className="text-[#00D4FF]" />}
+          Icon={TrendingUp}
+          iconColor="text-[#00D4FF]"
           label={t('landing.tokens')}
           value="-90%"
           iconBg="bg-[rgba(0,212,255,0.15)]"
@@ -410,7 +421,8 @@ const RightDecorations = memo(() => {
     <>
       <div className="absolute top-[8%]" style={{ right: 'calc(-10vw - 60px)' }}>
         <DecorativeStat
-          icon={<Users size={14} className="text-[#00D4FF]" />}
+          Icon={Users}
+          iconColor="text-[#00D4FF]"
           label={t('landing.agents')}
           value="6+"
           iconBg="bg-[#00D4FF]/15"

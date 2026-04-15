@@ -92,7 +92,7 @@ export const SectionShell = memo<SectionShellProps>(
             </div>
           )}
 
-          <motion.div variants={itemVariants}>{children}</motion.div>
+          {children}
         </motion.div>
       </section>
     );
