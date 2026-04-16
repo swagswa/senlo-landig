@@ -468,7 +468,14 @@ const Headline = memo(() => {
 
       <motion.p
         variants={wordVariants}
-        className="mt-5 md:mt-6 text-sm md:text-base text-white/55 leading-relaxed max-w-[600px] mx-auto"
+        className="mt-4 md:mt-5 text-base md:text-lg font-medium text-[#00D4FF]/90 tracking-tight"
+      >
+        {t('landing.heroPain')}
+      </motion.p>
+
+      <motion.p
+        variants={wordVariants}
+        className="mt-3 md:mt-4 text-sm md:text-base text-white/55 leading-relaxed max-w-[600px] mx-auto"
       >
         {t('landing.heroSubheadline')}
       </motion.p>

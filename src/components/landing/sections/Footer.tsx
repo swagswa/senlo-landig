@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Phone, Send } from 'lucide-react';
 import { SenloLogo } from '@/components/ui/SenloLogo';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 
@@ -72,7 +73,39 @@ export const Footer = memo(() => {
           ))}
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Contact block */}
+        <div className="mt-14 pt-8 border-t border-white/[0.06]">
+          <div className="flex flex-col items-center text-center gap-4 mb-10">
+            <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-white/35">
+              {t('landing.footerContactTitle')}
+            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <a
+                href="tel:+79817324230"
+                className="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors duration-200 group"
+              >
+                <div className="w-9 h-9 rounded-xl bg-white/[0.06] group-hover:bg-white/[0.12] flex items-center justify-center transition-colors duration-200">
+                  <Phone size={16} className="text-[#00D4FF]" />
+                </div>
+                <span className="text-sm font-medium">8 981 732-42-30</span>
+              </a>
+              <a
+                href="https://t.me/rtsmerty"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors duration-200 group"
+              >
+                <div className="w-9 h-9 rounded-xl bg-white/[0.06] group-hover:bg-white/[0.12] flex items-center justify-center transition-colors duration-200">
+                  <Send size={16} className="text-[#00D4FF]" />
+                </div>
+                <span className="text-sm font-medium">@rtsmerty</span>
+              </a>
+            </div>
+            <p className="text-sm text-white/50">{t('landing.footerContactName')}</p>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/35">{t('landing.footerCopyright')}</p>
           <p className="text-xs text-white/35">{t('landing.footerBuilt')}</p>
         </div>

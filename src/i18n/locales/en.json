@@ -993,6 +993,7 @@
     "eyebrow": "AI for sales and support on MAX",
     "headlineTop": "Unified AI system for sales",
     "headlineBottom": "and support on MAX",
+    "heroPain": "You won't miss a single call",
     "heroSubheadline": "Senlo replies to customers on MAX, on your website, and in voice. It remembers history, answers from your knowledge base, and hands dialogs to a human when needed.",
     "heroPrimaryCta": "Try for free",
     "heroSecondaryCta": "Watch demo",
@@ -1187,6 +1188,8 @@
     "footerContacts": "Contacts",
     "footerPrivacy": "Privacy policy",
     "footerTerms": "Terms of use",
+    "footerContactTitle": "Get in touch",
+    "footerContactName": "Artem - founder of Senlo",
     "footerTagline": "Unified AI system for sales and support on MAX. Powered by Gemini 3 Flash.",
     "footerCopyright": "© 2026 Senlo. All rights reserved.",
     "footerBuilt": "Built on Gemini, Neo4j and PostgreSQL"

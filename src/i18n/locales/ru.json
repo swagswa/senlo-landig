@@ -993,6 +993,7 @@
     "eyebrow": "AI для продаж и поддержки в MAX",
     "headlineTop": "Единая AI-система для продаж",
     "headlineBottom": "и поддержки в MAX",
+    "heroPain": "Вы не пропустите ни одного звонка",
     "heroSubheadline": "Senlo отвечает клиентам в MAX, на сайте и голосом. Помнит историю, работает по вашей базе знаний и передаёт диалог менеджеру, когда это нужно.",
     "heroPrimaryCta": "Попробовать бесплатно",
     "heroSecondaryCta": "Смотреть демо",
@@ -1187,6 +1188,8 @@
     "footerContacts": "Контакты",
     "footerPrivacy": "Политика конфиденциальности",
     "footerTerms": "Условия использования",
+    "footerContactTitle": "Связаться с нами",
+    "footerContactName": "Артем - основатель Senlo",
     "footerTagline": "Единая AI-система для продаж и поддержки в MAX. Работает на Gemini 3 Flash.",
     "footerCopyright": "© 2026 Senlo. Все права защищены.",
     "footerBuilt": "Собрано на Gemini, Neo4j и PostgreSQL"
