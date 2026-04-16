@@ -101,7 +101,7 @@ export const Footer = memo(() => {
                 <span className="text-sm font-medium">@rtsmerty</span>
               </a>
             </div>
-            <p className="text-sm text-white/50">{t('landing.footerContactName')}</p>
+            <p className="text-sm text-white/50">Артем</p>
           </div>
         </div>
 
